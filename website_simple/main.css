@@ -1,0 +1,248 @@
+/* --- OUR PAINT BUCKETS (Variables) --- */
+:root {
+  --beige: #f5f3ec;
+  --white: #ffffff;
+  --red: #b81d22;
+  --navy: #0c1424;
+  --blue: #004aad;
+  --dark-gray: #333333;
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lora", serif;
+  background-color: var(--beige);
+  color: var(--dark-gray);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.landing-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.logo-name {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-btn,
+.cv-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  border-radius: 50px;
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  transition: var(--transition);
+}
+
+.cv-btn {
+  margin-top: 1.5rem;
+}
+
+.main-btn:hover,
+.cv-btn:hover {
+  background-color: var(--navy);
+  color: var(--beige);
+  transform: translateY(-2px);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.panel,
+#projects {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(12, 20, 36, 0.1);
+}
+
+.panel h2,
+#projects h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--navy);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#projects h2 {
+  margin-bottom: 0rem;
+}
+
+/* --- ABOUT --- */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image {
+  flex-shrink: 0;
+}
+
+.profile-drawing {
+  max-width: 350px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* --- PROJECT --- */
+
+#projects {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(12, 20, 36, 0.1);
+}
+
+#projects > h2,
+#projects > p {
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: left;
+}
+
+.project-train {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+
+  padding: 1rem 5vw 2rem 5vw;
+
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.project-train::-webkit-scrollbar {
+  display: none;
+}
+
+.project-box {
+  min-width: 300px;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.2rem;
+
+  /* scroll-snap-align: start; */
+
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+.project-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* --- CERTIFICATIONS --- */
+.cert-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cert-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed rgba(12, 20, 36, 0.2);
+}
+
+/* --- FOOTER --- */
+.main-footer {
+  background-color: var(--navy);
+  color: var(--beige);
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+}
+
+.main-footer h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--beige);
+}
+
+.email-link {
+  display: inline-block;
+  color: var(--red);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 1.5rem 0;
+  transition: opacity 0.3s;
+}
+
+.email-link:hover {
+  opacity: 0.8;
+}
+
+.social-links {
+  margin: 1.5rem 0;
+}
+
+.social-link {
+  color: var(--beige);
+  text-decoration: none;
+  margin: 0 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.social-link:hover {
+  opacity: 1;
+}
+
+.separator {
+  color: rgba(245, 243, 236, 0.3);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
